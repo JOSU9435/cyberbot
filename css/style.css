@@ -7,15 +7,24 @@ div
     margin :0;
     padding:0;
 }
-.l_eye,.r_eye
+.l_eye
 {
     /* background:rgb(212, 0, 231) ; */
     position: absolute;
-    animation-name:example;
+    animation-name:leftEyeAnimation;
     animation-duration: 1.5s ;
     animation-iteration-count: infinite;
-    animation-delay:-0.7s ;
+    animation-delay:-0.9s ;
     transform:rotate(45deg);
+}
+.r_eye{
+
+    position: absolute;
+    animation-name: rightEyeAnimation;
+    animation-duration: 1.5s ;
+    animation-iteration-count: infinite;
+    animation-delay:0s ;
+    transform:rotate(-45deg);
 }
 .android
 {
@@ -50,7 +59,7 @@ div
     top: 60px;
     /* transform: rotate(45deg);  */
     border-left: 3px solid white;
-    border-bottom: 3px solid white; 
+    border-top: 3px solid white; 
 }
 .l_eye
 { 
@@ -124,7 +133,7 @@ div.button1
     position:reltiave;
 }
 
-@keyframes example{
+@keyframes leftEyeAnimation{
     0%{
         transform:rotate(45deg);
     }
@@ -147,6 +156,29 @@ div.button1
         opacity: 0.8;
       }
     }
+@keyframes rightEyeAnimation{
+    0%{
+        transform:rotate(-45deg);
+    }
+    30% {
+        transform: rotate(0deg);
+        border-radius: 50%;
+        border: 3px solid white;
+        height:30px;
+        transform: translate(0,-20%);
+        background-color: white;
+        opacity: 0.8;
+      }
+      70% {
+        transform: rotate(0deg);
+        border-radius: 50%;
+        border: 3px solid white;
+        height:30px;
+        transform: translate(0,-20%);
+        background-color: white;
+        opacity: 0.8;
+      }
+    } 
 .button1{
     /* text-align: center; */
     border-radius: 30%;
