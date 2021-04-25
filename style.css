@@ -1,6 +1,6 @@
 body
 {
-    background-color: red;
+    background-color: black;
 }
 div
 {
@@ -111,12 +111,24 @@ div
     border-radius:20px;
 }
 .l_arm{
-    left:585px;
+    left:550px;
     transform: rotate(270deg);
 }
 .r_arm{
-    right:700px;
+    right:650px;
     transform: rotate(270deg);
+}
+.l_leg,.r_leg{
+    position:relative;
+    height: 80px;
+    top:100px;
+    border-radius: 0 0 25px 25px;
+}
+.l_leg{
+    left:100px;
+}
+.r_leg{
+    right: 100 px;
 }
 div.button1
 {
