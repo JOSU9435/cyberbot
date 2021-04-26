@@ -1,214 +1,107 @@
-body
-{
-    background-color: black;
+body {
+    background-color: rgb(53, 53, 53);
 }
-div
-{
-    margin :0;
-    padding:0;
-}
-.l_eye
-{
+
+.and-head {
     position: absolute;
-    animation-name:leftEyeAnimation;
-    animation-duration: 1.5s ;
-    animation-iteration-count: infinite;
-    animation-delay:-0.9s ;
-    transform:rotate(45deg);
+    height: 12vh;
+    width: 25vh;
+    background-color: rgb(69, 235, 47);
+    top: -28%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    border-radius: 30vh 30vh 15px 15px;
 }
-.r_eye{
 
+.l-ant {
     position: absolute;
-    animation-name: rightEyeAnimation;
-    animation-duration: 1.5s ;
-    animation-iteration-count: infinite;
-    animation-delay:0s ;
-    transform:rotate(-45deg);
+    width: 1vh;
+    height: 7vh;
+    background-color: rgb(69, 235, 47);
+    border-radius: 6vh;
+    transform: rotateZ(-45deg);
+    z-index: -1;
 }
-.android
-{
-    height:90px;
-    width:330px;
-    margin:100px auto;
-}
-.head 
-{ 
-    top:100px;
-    background:rgb(212, 0, 231) ;
-    width: 220px; 
-    height: 100px; top: 32px; 
-    border-radius: 110px 110px 0 0; 
+
+.r-ant {
     position: absolute;
-    animation-name: headAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
-.l_eye
-{
-    width: 20px; 
-    height: 20px; 
-    position: absolute; 
-    top: 60px;
-    /* transform: rotate(45deg);  */
-    border-right: 3px solid white;
-    border-top: 3px solid white;
-}
-.r_eye
-{
-    width: 20px; 
-    height: 20px; 
-    position: absolute; 
-    top: 60px;
-    /* transform: rotate(45deg);  */
-    border-left: 3px solid white;
-    border-top: 3px solid white; 
-}
-.l_eye
-{ 
-    left: 50px;
-} 
-.r_eye
-{ 
-    right: 50px; 
-    /* transform: rotate(-45deg); */
-}
-.l_ant
-{
-    width:60px;
-    height:10px;
-    position:absolute ;
-    border-radius: 50px;
-    /* border: ; */
-    background-color: rgb(212, 0, 231);
-}
-.r_ant
-{
-    width:60px;
-    height:10px;
-    position:absolute ;
-    border-radius: 50px;
-    background-color: rgb(212, 0, 231);
-
-}
-.l_ant 
-{ 
- left: 10px;
- transform:rotate(50deg);  
-} 
-
-.r_ant 
-{ 
-  right: 10px; 
-  transform: rotate(-50deg); 
-}
-.body
-{
-    width:200px;
-    height:184px;
-    top:40px;
-    border-radius: 0 0 25px 25px;
-    background:rgb(212, 0, 231) ;
-    padding:3%
-}
-.l_arm ,.r_arm,.l_leg,.r_leg
-{
-    width:50px;
-    position:absolute;
-    background:rgb(212, 0, 231) ;
-}
-.l_arm,.r_arm
-{
-    height:150px;
-    border-radius:20px;
-}
-.l_arm{
-    left:550px;
-    transform: rotate(270deg);
-    animation-name: leftArmAnimation;
-    animation-duration: 1.5s ;
-    animation-iteration-count: infinite;
-    animation-delay:-0.9s ;
-}
-.r_arm{
-    right:650px;
-    transform: rotate(270deg);
-}
-.l_leg,.r_leg{
-    position:absolute;
-    height: 80px;
-    top:300px;
-    border-radius: 0 0 25px 25px;
-}
-.l_leg{
-    left:87vh;
-}
-.r_leg{
-    left: 102vh;
-}
-div.button1
-{
-    padding:50px 0 0 200px ;
-    position:reltiave;
+    width: 1vh;
+    height: 7vh;
+    right: 0;
+    background-color: rgb(69, 235, 47);
+    border-radius: 6vh;
+    transform: rotateZ(45deg);
+    z-index: -1;
 }
 
-@keyframes leftEyeAnimation{
-    0%{
-        transform:rotate(45deg);
-    }
-    30% {
-        transform: rotate(0deg);
-        border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
-        transform: translate(0,-20%);
-        background-color: white;
-        opacity: 0.8;
-      }
-      70% {
-        transform: rotate(0deg);
-        border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
-        transform: translate(0,-20%);
-        background-color: white;
-        opacity: 0.8;
-      }
-    }
-@keyframes rightEyeAnimation{
-    0%{
-        transform:rotate(-45deg);
-    }
-    30% {
-        transform: rotate(0deg);
-        border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
-        transform: translate(0,-20%);
-        background-color: white;
-        opacity: 0.8;
-      }
-      70% {
-        transform: rotate(0deg);
-        border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
-        transform: translate(0,-20%);
-        background-color: white;
-        opacity: 0.8;
-      }
-    } 
-    @keyframes headAnimation {
-        0%{
-            top:2vh;
-        }
-        50%{
-            top:3vh;
-        }
-    }
+.l-eye {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    height: 4vh;
+    width: 2vh;
+    background-color: rgba(39, 38, 38, 0.5);
+    /* border: 0.5vh solid white; */
+    border-radius: 3vh;
 
-/* .button1{
-    /* text-align: center; */
-    /* border-radius: 30%; */
-    /* height:60px; */
-    /* width: 70px; */
-/* }*/
+}
+.r-eye {
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    height: 4vh;
+    width: 2vh;
+    background-color: rgba(39, 38, 38, 0.5);
+    /* border: 0.5vh solid white; */
+    border-radius: 3vh;
+}
+
+.and {
+    position: absolute;
+    height: 28vh;
+    width: 25vh;
+    background-color: rgb(69, 235, 47);
+    border-radius: 1vh;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.and .l-hand, .r-hand {
+    position: absolute;
+    top: 5%;
+    right: -6vh;
+    height: 20vh;
+    width: 5vh;
+    background-color: rgb(69, 235, 47);
+    border-radius: 3vh;
+
+}
+.and .l-hand {
+    left: -6vh;
+    
+}
+.and .r-hand {
+    right: -6vh;
+}
+
+.and .l-leg, .r-leg {
+    position: absolute;
+    width: 6vh;
+    height: 10vh;
+    bottom: -11vh;
+    background-color: rgb(69, 235, 47);
+    border-radius: 0.5vh 0.5vh 2vh 2vh;
+}
+
+.l-leg {
+    left: 3vh;
+}
+
+.r-leg {
+    right: 3vh;
+}
+
+@keyframes head-moves {
+    to {transform: 10;}
+}
