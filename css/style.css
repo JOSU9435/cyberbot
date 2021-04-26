@@ -9,7 +9,6 @@ div
 }
 .l_eye
 {
-    /* background:rgb(212, 0, 231) ; */
     position: absolute;
     animation-name:leftEyeAnimation;
     animation-duration: 1.5s ;
@@ -134,10 +133,10 @@ div
     border-radius: 0 0 25px 25px;
 }
 .l_leg{
-    left:600px;
+    left:87vh;
 }
 .r_leg{
-    right: 00 px;
+    left: 102vh;
 }
 div.button1
 {
@@ -145,7 +144,7 @@ div.button1
     position:reltiave;
 }
 
-@keyframes eye_animation{
+@keyframes leftEyeAnimation{
     0%{
         transform:rotate(45deg);
     }
