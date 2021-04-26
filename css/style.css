@@ -11,66 +11,66 @@ div
 {
     position: absolute;
     animation-name:leftEyeAnimation;
-    animation-duration: 1.5s ;
+    animation-duration: 1s ;
     animation-iteration-count: infinite;
-    animation-delay:-0.9s ;
+    animation-delay:-0.7s ;
     transform:rotate(45deg);
 }
 .r_eye{
 
     position: absolute;
     animation-name: rightEyeAnimation;
-    animation-duration: 1.5s ;
+    animation-duration: 1s ;
     animation-iteration-count: infinite;
-    animation-delay:0s ;
+    animation-delay:-0.7s ;
     transform:rotate(-45deg);
 }
-.android
+div.android
 {
-    height:90px;
-    width:330px;
-    margin:100px auto;
-}
-.head 
-{ 
-    top:100px;
-    background:rgb(212, 0, 231) ;
-    width: 220px; 
-    height: 100px; top: 32px; 
-    border-radius: 110px 110px 0 0; 
     position: absolute;
-    animation-name: headAnimation;
+    top: 50%;
+    left: 50%;
+    width: 40vh;
+    height: 70vh;
+    transform: translate(-50%,-50%);
+}
+div.head 
+{   position: relative;
+    top:8%;
+    left: 50%;
+    transform: translate(-50%);
+    background:rgb(212, 0, 231) ;
+    width: 22.3vh; 
+    height: 10vh;
+
+    border-radius: 110px 110px 0 0; 
+    
+    /* animation-name: headAnimation; */
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    /* animation-direction: alternate-reverse; */
 }
 .l_eye
 {
-    width: 20px; 
-    height: 20px; 
-    position: absolute; 
-    top: 60px;
+    width: 2vh; 
+    height: 2vh; 
+    /* position: absolute;  */
+    top: 50%;
+    left: 6vh;
     /* transform: rotate(45deg);  */
-    border-right: 3px solid white;
-    border-top: 3px solid white;
+    border-right: 0.4vh solid white;
+    border-top: 0.4vh solid white;
 }
 .r_eye
 {
-    width: 20px; 
-    height: 20px; 
+    width: 2vh; 
+    height: 2vh; 
     position: absolute; 
-    top: 60px;
+    top: 50%;
+    right: 6vh;
     /* transform: rotate(45deg);  */
-    border-left: 3px solid white;
-    border-top: 3px solid white; 
-}
-.l_eye
-{ 
-    left: 50px;
-} 
-.r_eye
-{ 
-    right: 50px; 
-    /* transform: rotate(-45deg); */
+    border-left: 0.4vh solid white;
+    border-top: 0.4vh solid white; 
 }
 .l_ant
 {
@@ -101,11 +101,14 @@ div
   right: 10px; 
   transform: rotate(-50deg); 
 }
-.body
-{
-    width:200px;
-    height:184px;
-    top:40px;
+div.androidBody
+{   
+    position: absolute;
+    width:20vh;
+    height:18vh;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     border-radius: 0 0 25px 25px;
     background:rgb(212, 0, 231) ;
     padding:3%
@@ -158,8 +161,8 @@ div.button1
     30% {
         transform: rotate(0deg);
         border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
+        border: 0.4vh solid white;
+        height:3vh;
         transform: translate(0,-20%);
         background-color: white;
         opacity: 0.8;
@@ -167,8 +170,8 @@ div.button1
       70% {
         transform: rotate(0deg);
         border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
+        border: 0.4vh solid white;
+        height:3vh;
         transform: translate(0,-20%);
         background-color: white;
         opacity: 0.8;
@@ -181,8 +184,8 @@ div.button1
     30% {
         transform: rotate(0deg);
         border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
+        border: 0.4vh solid white;
+        height:3vh;
         transform: translate(0,-20%);
         background-color: white;
         opacity: 0.8;
@@ -190,8 +193,8 @@ div.button1
       70% {
         transform: rotate(0deg);
         border-radius: 50%;
-        border: 3px solid white;
-        height:30px;
+        border: 0.4vh solid white;
+        height:3vh;
         transform: translate(0,-20%);
         background-color: white;
         opacity: 0.8;
