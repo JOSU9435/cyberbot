@@ -7,10 +7,12 @@ body {
     height: 12vh;
     width: 25vh;
     background-color: rgb(69, 235, 47);
-    top: -28%;
+    top: -19%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -50%);
     border-radius: 30vh 30vh 15px 15px;
+    animation: 1s hi-head-movement -0.5s infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
 .l-ant {
@@ -43,7 +45,7 @@ body {
     background-color: rgba(39, 38, 38, 0.5);
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
-
+    animation: 1s hi-eye-movement -0.5s infinite alternate;
 }
 .r-eye {
     position: absolute;
@@ -54,23 +56,34 @@ body {
     background-color: rgba(39, 38, 38, 0.5);
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
+    animation: 1s hi-eye-movement -0.5s infinite alternate;
 }
 
+.and-body {
+    position: absolute;
+    height: 26vh;
+    width: 25vh;
+    background-color: rgb(69, 235, 47);
+    border-radius: 1vh;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    animation: 1s hi-body-movement -0.5s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
 .and {
     position: absolute;
     height: 28vh;
     width: 25vh;
-    background-color: rgb(69, 235, 47);
     border-radius: 1vh;
-    top: 40%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -25%);
 }
 
 .and .l-hand, .r-hand {
     position: absolute;
-    top: 5%;
-    right: -6vh;
+    top: 8%;
     height: 20vh;
     width: 5vh;
     background-color: rgb(69, 235, 47);
@@ -79,10 +92,13 @@ body {
 }
 .and .l-hand {
     left: -6vh;
-    
+    animation: 1s hi-lhand-movement -0.5s infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 .and .r-hand {
     right: -6vh;
+    animation: 1s hi-rhand-movement -0.5s infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
 .and .l-leg, .r-leg {
@@ -100,8 +116,129 @@ body {
 
 .r-leg {
     right: 3vh;
+    animation: 1s hi-lleg-movement -0.5s infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes head-moves {
     to {transform: 10;}
+}
+
+/* HI RIGHT HAND MOVEMENT */
+
+@keyframes hi-rhand-movement {
+    0%{
+        transform-origin: top ;
+    }
+
+    55%{
+        transform-origin: top ;
+        transform: rotate(-155deg);
+        right: -5.2vh;
+    }
+
+    70%{
+        transform-origin: top ;
+        transform: rotate(-135deg);
+        right: -5.2vh;
+    }
+
+    85%{
+        transform-origin: top ;
+        transform: rotate(-155deg);
+        right: -5.2vh;
+    }
+
+    100%{
+        transform-origin: top ;
+        transform: rotate(-135deg);
+        right: -5.2vh;
+    }
+}
+
+/* HI BODY MOVEMENT */
+
+@keyframes hi-body-movement {
+    0%{
+        transform-origin: center ;
+    }
+
+    55%{
+        transform-origin: centre ;
+        transform: translate(-50%,-25%) rotate(-5deg);
+    }
+    100%{
+        transform-origin: centre ;        
+        transform: translate(-50%,-25%) rotate(-5deg);
+    }
+}
+
+/* HI LEFT HAND MOVEMENT */
+
+@keyframes hi-lhand-movement {
+    0%{
+        left: -6vh;
+        top: 8%;
+    }
+
+    55%{
+        left: -6.8vh;
+        top: 12%;
+    }
+    100%{
+        left: -6.8vh;
+        top: 12%;
+    }
+}
+
+/* HI HEAD MOVEMENT */
+
+@keyframes hi-head-movement {
+    0%{
+        
+    }
+
+    55%{
+        transform: translate(-50%,-50%) rotate(1deg);
+        left: 46.5%;
+    }
+    100%{      
+        transform: translate(-50%,-50%) rotate(1deg);
+        left: 46.5%;
+    }
+}
+
+/*HI RIGHT LEG MOVEMENT*/
+
+@keyframes hi-lleg-movement {
+    0%{
+        
+    }
+
+    55%{
+        transform: rotate(-7deg);
+        right: 1vh;
+        bottom: -10vh;
+    }
+    100%{      
+        transform: rotate(-7deg);
+        right: 1vh;        
+        bottom: -10vh;
+    }
+}
+
+/* HI EYE MOVEMENT */
+
+@keyframes hi-eye-movement {
+    
+    0%{
+        
+    }
+
+    55%{
+        transform: rotateX(180deg);
+    }
+    100%{      
+        transform: rotateX(180deg);
+    }
 }
