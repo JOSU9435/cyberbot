@@ -83,26 +83,40 @@ body {
     position: absolute;
     transform: translate(-50%,0);
 }
-/* .bulb_lower_1
-{
-    border-radius:0 0 50% 50%;
-    border-bottom:0.05rem solid white;
-    height:6vh;
-    width: 5vh;
-    left:8vh;
-    top:13vh;
-    /* bottom:0.3vh; */
-    /* background-color: rgba(255, 255, 0,0); */
-    /* position: absolute; */
-    /* transform: translate(-50%,0); */
-/* } */
+
+/* BUTTONS */
+
 .buttons
 {
     position:absolute;
-    top:20vh;
-    left:50%;
-    transform: translate(-50%,0);
+    bottom: 15%;
+    transform: translate(-50%,50%);
+    background-color: blue;
+    width: 8vh;
+    height: 4vh;    
+    border: 2px solid red;
 }
+
+.button-bulb{
+    left: 50%;
+}
+
+div.button-txt-bulb{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.button-hi{
+    left: 20%;
+}
+
+/* BUTTONS */
+
 .and-head {
     position: absolute;
     height: 12vh;
@@ -112,7 +126,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30vh 30vh 15px 15px;
-    animation: 1s hi-head-movement -0.5s infinite alternate;
+    /* animation: 1s hi-head-movement -0.5s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 
@@ -146,7 +160,7 @@ body {
     background-color: rgba(39, 38, 38, 0.5);
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
-    animation: 1s hi-eye-movement -0.5s infinite alternate;
+    /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
 }
 .r-eye {
     position: absolute;
@@ -157,7 +171,7 @@ body {
     background-color: rgba(39, 38, 38, 0.5);
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
-    animation: 1s hi-eye-movement -0.5s infinite alternate;
+    /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
 }
 
 .and-body {
@@ -169,7 +183,7 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -25%);
-    animation: 1s hi-body-movement -0.5s infinite alternate;
+    /* animation: 1s hi-body-movement -0.5s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 .and {
@@ -179,7 +193,7 @@ body {
     border-radius: 1vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -50%);
 }
 
 .and .l-hand, .r-hand {
@@ -193,13 +207,13 @@ body {
 }
 .and .l-hand {
     left: -6vh;
-    animation: 1s hi-lhand-movement -0.5s infinite alternate;
-    animation-timing-function: ease-in-out;
+    /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
+    /* animation-timing-function: ease-in-out; */
 }
 .and .r-hand {
     right: -6vh;
-    animation: 1s hi-rhand-movement -0.5s infinite alternate;
-    animation-timing-function: ease-in-out;
+    /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
+    /* animation-timing-function: ease-in-out; */
 }
 
 .and .l-leg, .r-leg {
@@ -217,8 +231,8 @@ body {
 
 .r-leg {
     right: 3vh;
-    animation: 1s hi-lleg-movement -0.5s infinite alternate;
-    animation-timing-function: ease-in-out;
+    /* animation: 1s hi-rleg-movement -0.5s infinite alternate; */
+    /* animation-timing-function: ease-in-out; */
 }
 
 @keyframes head-moves {
@@ -311,7 +325,7 @@ body {
 
 /*HI RIGHT LEG MOVEMENT*/
 
-@keyframes hi-lleg-movement {
+@keyframes hi-rleg-movement {
     0%{
         
     }
