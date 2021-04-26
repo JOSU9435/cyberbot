@@ -1,6 +1,6 @@
 body
 {
-    background-color: red;
+    background-color: black;
 }
 div
 {
@@ -9,7 +9,6 @@ div
 }
 .l_eye
 {
-    /* background:rgb(212, 0, 231) ; */
     position: absolute;
     animation-name:leftEyeAnimation;
     animation-duration: 1.5s ;
@@ -40,6 +39,9 @@ div
     height: 100px; top: 32px; 
     border-radius: 110px 110px 0 0; 
     position: absolute;
+    animation-name: headAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 .l_eye
 {
@@ -120,12 +122,28 @@ div
     border-radius:20px;
 }
 .l_arm{
-    left:585px;
+    left:550px;
     transform: rotate(270deg);
+    animation-name: leftArmAnimation;
+    animation-duration: 1.5s ;
+    animation-iteration-count: infinite;
+    animation-delay:-0.9s ;
 }
 .r_arm{
-    right:700px;
+    right:650px;
     transform: rotate(270deg);
+}
+.l_leg,.r_leg{
+    position:absolute;
+    height: 80px;
+    top:300px;
+    border-radius: 0 0 25px 25px;
+}
+.l_leg{
+    left:87vh;
+}
+.r_leg{
+    left: 102vh;
 }
 div.button1
 {
@@ -179,9 +197,18 @@ div.button1
         opacity: 0.8;
       }
     } 
-.button1{
+    @keyframes headAnimation {
+        0%{
+            top:2vh;
+        }
+        50%{
+            top:3vh;
+        }
+    }
+
+/* .button1{
     /* text-align: center; */
-    border-radius: 30%;
-    height:60px;
-    width: 70px;
-}
+    /* border-radius: 30%; */
+    /* height:60px; */
+    /* width: 70px; */
+/* }*/
