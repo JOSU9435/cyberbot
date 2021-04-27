@@ -1,6 +1,146 @@
 body {
     background-color: rgb(53, 53, 53);
+    font-family: 'Poppins', sans-serif;
 }
+.bulb-container{
+    position:absolute;
+    width:5vh;
+    height:5vh;
+    left: 70vw;
+}
+/* img{
+    top:5vh;
+    left:50vh;
+    width:100px;
+    height:100px;
+    transform: translate(-50%,0);
+} */
+.bulb_outer
+{
+    border-radius: 50%;
+    border:0.2rem solid white ;
+    height:15vh;
+    width: 15vh;
+    position: absolute;
+}
+.bulb_inner
+{
+    border-radius:50% ;
+    border:0.1rem solid white;
+    height:10vh;
+    width:10vh;
+    left:50%;
+    bottom: 0.1vh;
+    background-color: rgba(255, 255, 0,0);
+    position:absolute;
+    transform: translate(-50%,0);
+}
+.bulb_inner_1
+{
+    border-radius:50% 50% 0  0;
+    border:0.05rem solid white;
+    height:3vh;
+    width: 3vh;
+    left:50%;
+    bottom:0.3vh;
+    background-color: rgba(255, 255, 0,0);
+    position: absolute;
+    transform: translate(-50%,0);
+}
+.bulb_inner_2
+{
+    border-radius:50% 50% 0  0;
+    border:0.05rem solid white;
+    height:3vh;
+    width: 1vh;
+    left:28%;
+    bottom:0.3vh;
+    background-color: rgba(255, 255, 0,0);
+    position: absolute;
+    transform: translate(-50%,0);
+}
+.bulb_inner_3
+{
+    border-radius:50% 50% 0  0;
+    border:0.05rem solid white;
+    height:3vh;
+    width: 1vh;
+    right:15%;
+    bottom:0.3vh;
+    background-color: rgba(255, 255, 0,0);
+    position: absolute;
+    transform: translate(-50%,0);
+}
+.bulb_lower
+{
+    border-radius:0 0 50% 50%;
+    border:0.05rem solid white;
+    height:6vh;
+    width: 5vh;
+    left:8vh;
+    top:16vh;
+    /* bottom:0.3vh; */
+    background-color: rgba(255, 255, 0,0);
+    position: absolute;
+    transform: translate(-50%,0);
+}
+
+/* BUTTONS */
+
+.buttons
+{
+    position:absolute;
+    bottom: 15%;
+    transform: translate(-50%,50%);
+    background-color: rgb(53, 53, 53);
+    color: rgb(69, 235, 47);
+    width: 16vh;
+    height: 6vh;   
+    font-size: 3vh;
+    cursor: pointer; 
+    border: 2px solid black;
+    border-radius: 0.8vh 0.8vh 0.8vh 0.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-weight: 900;
+    transition: 0.4s;
+    user-select: none;
+}
+
+.buttons:hover{
+    color: rgb(53, 53, 53);
+    transition: 0.4s;
+    border: 0;
+}
+
+.buttons::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(69, 235, 47, 0.774);
+    width: 100%;
+    height: 0%;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+
+.buttons:hover::before{
+    height: 180%;
+    transition: 0.4s;
+}
+
+.button-bulb{
+    left: 50%;
+}
+
+.button-hi{
+    left: 20%;
+}
+
+/* BUTTONS */
 
 .and-head {
     position: absolute;
@@ -12,7 +152,7 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 30vh 30vh 15px 15px;
     /* animation: 1s hi-head-movement -0.5s infinite alternate; */
-    animation: dance-head-movement 2s normal infinite ease-in;
+    animation: dance-head-movement 2.7s normal infinite ease-in-out;
     animation-timing-function: ease-in-out;
 }
 
@@ -46,7 +186,7 @@ body {
     background-color: rgba(39, 38, 38, 0.5);
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
-    animation: 1s hi-eye-movement -0.5s infinite alternate;
+    /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
 }
 .r-eye {
     position: absolute;
@@ -57,7 +197,7 @@ body {
     background-color: rgba(39, 38, 38, 0.5);
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
-    animation: 1s hi-eye-movement -0.5s infinite alternate;
+    /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
 }
 
 .and-body {
@@ -70,7 +210,7 @@ body {
     left: 50%;
     transform: translate(-50%, -25%);
     /* animation: 1s hi-body-movement -0.5s infinite alternate; */
-    animation: dance-body-movement 1.5s infinite alternate;
+    animation: dance-body-movement 2.7s infinite alternate;
     animation-timing-function: ease-in-out;
 }
 .and {
@@ -78,9 +218,9 @@ body {
     height: 28vh;
     width: 25vh;
     border-radius: 1vh;
-    top: 33%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -50%);
 }
 
 .and .l-hand, .r-hand {
@@ -88,9 +228,10 @@ body {
     top: 8%;
     height: 20vh;
     width: 5vh;
-    background-color: rgb(69, 235, 47);
+    background-color: rgb(40, 150, 26);
     border-radius: 3vh;
-
+    animation: dance-hand-movement 2.7s infinite alternate,
+               dance-lhand-movement 1.5s infinite alternate;
 }
 .and .l-hand {
     left: -6vh;
@@ -212,7 +353,7 @@ body {
 
 /*HI RIGHT LEG MOVEMENT*/
 
-@keyframes hi-lleg-movement {
+@keyframes hi-rleg-movement {
     0%{
         
     }
@@ -248,61 +389,121 @@ body {
 @keyframes dance-body-movement {
     0%{
         transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(5deg);
     }
-    20%{
+    16.5%{
         transform-origin: center;
-       transform: translate(-50%,-20%) rotateZ(5deg); 
+        transform: translate(-50%, -18%) rotateZ(-5deg);
     }
-    40%{
+    27% {
         transform-origin: center;
-       transform: translate(-50%,-20%) rotateZ(-5deg); 
+        transform: translate(-50%,-20%) rotateZ(0deg);
     }
-    60%{
+    38.5% {
         transform-origin: center;
-       transform: translate(-50%,-20%) rotateZ(5deg); 
+        transform: translate(-50%,-19%) rotateZ(-5deg);
+    }
+    49%{
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(5deg);
+    }
+    60.5%{
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(-5deg);
+    }
+    71%{
+        transform-origin: center;
+        transform: translate(-50%,-18%) rotateZ(5deg);
+    }
+    82.5%{
+        transform-origin: center;
+        transform: translate(-50%,-18%) rotateZ(-5deg);
     }
     100%{
         transform-origin: center;
-       transform: translate(-50%,-25%) rotateZ(-5deg); 
+        transform: translate(-50%,-20%) rotateZ(5deg);
+    }
+}
+
+@keyframes dance-hand-movement {
+    0%{
+        transform-origin: top;
+        transform: rotateZ(5deg);
+    }
+    16.5%{
+        transform-origin: top;
+        transform: translate(0%,10%) rotateZ(-15deg);
+    }
+    27% {
+        transform-origin: top;
+        transform: translate(0%,6%) rotateZ(15deg);
+    }
+    38.5% {
+        transform-origin: top;
+        transform: translate(0%,4%) rotateZ(-15deg);
+    }
+    49%{
+        transform-origin: top;
+        transform: translate(0%,0%) rotateZ(15deg);
+    }
+    60.5%{
+        transform-origin: top;
+        transform: translate(0%,0%) rotateZ(-15deg);
+    }
+    71%{
+        transform-origin: top;
+        transform: translate(0%,12%) rotateZ(15deg);
+    }
+    82.5%{
+        transform-origin: top;
+        transform: translate(0%,10%) rotateZ(-15deg);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotateZ(15deg);
     }
 }
 
 @keyframes dance-head-movement {
     0%{
         transform-origin: center;
-        transform: translate(-50%, -50%) rotateZ(7deg);
+        transform: translate(-50%, -50%) rotateZ(13deg);
     }
     16.5%{
         transform-origin: center;
-        transform: translate(-50%, -35%) rotateZ(-7deg);
+        transform: translate(-50%, -35%) rotateZ(-13deg);
     }
-    24.75% {
+    27% {
         transform-origin: center;
-        transform: translate(-50%, -40%) rotateZ(0deg);
+        transform: translate(-50%, -30%) rotateZ(0deg);
     }
-    33%{
+    38.5% {
         transform-origin: center;
-        transform: translate(-50%, -45%) rotateZ(-7deg);
+        transform: translate(-50%, -30%) rotateZ(-13deg);
     }
-    49.5%{
+    49%{
         transform-origin: center;
-        transform: translate(-50%, -50%) rotateZ(5deg);
+        transform: translate(-50%, -25%) rotateZ(13deg);
     }
-    66%{
+    60.5%{
         transform-origin: center;
-        transform: translate(-50%, -30%) rotateZ(-5deg);
+        transform: translate(-50%, -50%) rotateZ(-13deg);
+    }
+    71%{
+        transform-origin: center;
+        transform: translate(-50%, -30%) rotateZ(13deg);
     }
     82.5%{
         transform-origin: center;
-        transform: translate(-50%, -40%) rotateZ(5deg);
+        transform: translate(-50%, -25%) rotateZ(-13deg);
     }
     100%{
         transform-origin: center;
-        transform: translate(-50%, -50%) rotateZ(-5deg);
+        transform: translate(-50%, -50%) rotateZ(13deg);
     }
 }
 
-@keyframes dance-lhand-movement {
+/* @keyframes dance-lhand-movement {
     0% {
         transform-origin: center;
     }
@@ -321,4 +522,4 @@ body {
     100% {
         transform-origin: center;
     }
-}
+} */
