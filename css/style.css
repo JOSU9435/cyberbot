@@ -105,7 +105,7 @@ body {
     align-items: center;
     overflow: hidden;
     font-weight: 900;
-    transition: 0.4s;
+    transition: 0.2s;
     user-select: none;
 }
 
@@ -186,6 +186,7 @@ body {
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
     /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
+    animation: 10s idle-leye-movement 0s infinite forwards;
 }
 .r-eye {
     position: absolute;
@@ -197,6 +198,7 @@ body {
     /* border: 0.5vh solid white; */
     border-radius: 3vh;
     /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
+    animation: 10s idle-reye-movement 0s infinite forwards;
 }
 
 .and-body {
@@ -234,11 +236,13 @@ body {
     left: -6vh;
     /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
+    animation: 10s idle-lhand-animation 0s infinite forwards;
 }
 .and .r-hand {
     right: -6vh;
     /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
+    animation: 10s idle-rhand-animation 0s infinite forwards;
 }
 
 .and .l-leg, .r-leg {
@@ -260,9 +264,7 @@ body {
     /* animation-timing-function: ease-in-out; */
 }
 
-@keyframes head-moves {
-    to {transform: 10;}
-}
+/* HI ANIMATION */
 
 /* HI RIGHT HAND MOVEMENT */
 
@@ -341,10 +343,12 @@ body {
     55%{
         transform: translate(-50%,-50%) rotate(1deg);
         left: 46.5%;
+        top: -20%;
     }
     100%{      
         transform: translate(-50%,-50%) rotate(1deg);
         left: 46.5%;
+        top: -20%;
     }
 }
 
@@ -382,3 +386,141 @@ body {
         transform: rotateX(180deg);
     }
 }
+
+/* HIGH ANIMATION */
+
+/* IDLE ANIMATION */
+
+
+@keyframes idle-leye-movement {
+    0%{
+        transform: rotateX(0deg);
+    }
+
+    25%{
+        transform: rotateX(0deg);
+    }
+
+    34%{
+        transform: rotateX(360deg);
+    }
+
+    65%{
+        top: 30%;
+        left: 25%;
+    }
+
+    70%{
+        left: 22%;
+    }
+
+    75%{
+        left: 22%;
+    }
+    
+    85%{
+        left: 28%;
+    }
+
+    90%{
+        left: 28%;
+    }
+
+    95%{
+        left: 25%;
+    }
+    
+    100%{
+        transform: rotateX(360deg);
+        left: 25%;
+    }
+}
+
+
+@keyframes idle-reye-movement {
+    0%{
+        transform: rotateX(0deg);
+    }
+
+    25%{
+        transform: rotateX(0deg);
+    }
+
+    34%{
+        transform: rotateX(360deg);
+    }
+
+    65%{
+        top: 30%;
+        right: 25%;
+    }
+
+    70%{
+        right: 28%;
+    }
+
+    75%{
+        right: 28%;
+    }
+
+    85%{
+        right: 22%;
+    }
+
+    90%{
+        right: 22%;
+    }
+
+    95%{
+        right: 25%;
+    }
+
+    100%{
+        transform: rotateX(360deg);
+        right: 25%;
+    }
+}
+
+@keyframes idle-rhand-animation {
+    
+    0%{
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+    95%{
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+
+    97%{
+        transform-origin: top;
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+}
+@keyframes idle-lhand-animation {
+    
+    0%{
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+    95%{
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+
+    97%{
+        transform-origin: top;
+        transform: rotate(15deg);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+}
+
+
+/* IDLE ANIMATION */
