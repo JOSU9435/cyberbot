@@ -152,7 +152,8 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 30vh 30vh 15px 15px;
     /* animation: 1s hi-head-movement -0.5s infinite alternate; */
-    animation-timing-function: ease-in-out;
+    /* animation: dance-head-movement 2.7s normal infinite ease-in-out; */
+    /* animation-timing-function: ease-in-out; */
 }
 
 .l-ant {
@@ -211,6 +212,7 @@ body {
     left: 50%;
     transform: translate(-50%, -25%);
     /* animation: 1s hi-body-movement -0.5s infinite alternate; */
+    /* animation: dance-body-movement 2.7s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 .and {
@@ -228,21 +230,24 @@ body {
     top: 8%;
     height: 20vh;
     width: 5vh;
-    background-color: rgb(69, 235, 47);
+    background-color: rgb(40, 150, 26);
     border-radius: 3vh;
-
-}
+    /* animation: dance-hand-movement 2.7s infinite alternate,
+               dance-lhand-movement 1.5s infinite alternate;*/
+} 
 .and .l-hand {
     left: -6vh;
     /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
     animation: 10s idle-lhand-animation 0s infinite forwards;
+    animation-timing-function: ease-in-out;
 }
 .and .r-hand {
     right: -6vh;
     /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
     animation: 10s idle-rhand-animation 0s infinite forwards;
+    animation-timing-function: ease-in-out;
 }
 
 .and .l-leg, .r-leg {
@@ -260,8 +265,8 @@ body {
 
 .r-leg {
     right: 3vh;
-    /* animation: 1s hi-rleg-movement -0.5s infinite alternate; */
-    /* animation-timing-function: ease-in-out; */
+    /* animation: 1s hi-lleg-movement -0.5s infinite alternate; */
+    animation-timing-function: ease-in-out;
 }
 
 /* HI ANIMATION */
@@ -412,27 +417,33 @@ body {
 
     70%{
         left: 22%;
+        top: 33%;
     }
 
     75%{
         left: 22%;
+        top: 33%;
     }
     
     85%{
         left: 28%;
+        top: 33%;
     }
 
     90%{
         left: 28%;
+        top: 33%;
     }
 
     95%{
         left: 25%;
+        top: 30%;
     }
     
     100%{
         transform: rotateX(360deg);
         left: 25%;
+        top: 30%;
     }
 }
 
@@ -457,27 +468,35 @@ body {
 
     70%{
         right: 28%;
+        top: 33%;
     }
 
     75%{
         right: 28%;
+        top: 33%;
+
     }
 
     85%{
         right: 22%;
+        top: 33%;
     }
 
     90%{
         right: 22%;
+        top: 33%;
+
     }
 
     95%{
         right: 25%;
+        top: 30%;
     }
 
     100%{
         transform: rotateX(360deg);
         right: 25%;
+        top: 30%;
     }
 }
 
@@ -524,3 +543,145 @@ body {
 
 
 /* IDLE ANIMATION */
+
+/* DANCE */
+
+@keyframes dance-body-movement {
+    0%{
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(5deg);
+    }
+    16.5%{
+        transform-origin: center;
+        transform: translate(-50%, -18%) rotateZ(-5deg);
+    }
+    27% {
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(0deg);
+    }
+    38.5% {
+        transform-origin: center;
+        transform: translate(-50%,-19%) rotateZ(-5deg);
+    }
+    49%{
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(5deg);
+    }
+    60.5%{
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(-5deg);
+    }
+    71%{
+        transform-origin: center;
+        transform: translate(-50%,-18%) rotateZ(5deg);
+    }
+    82.5%{
+        transform-origin: center;
+        transform: translate(-50%,-18%) rotateZ(-5deg);
+    }
+    100%{
+        transform-origin: center;
+        transform: translate(-50%,-20%) rotateZ(5deg);
+    }
+}
+
+@keyframes dance-hand-movement {
+    0%{
+        transform-origin: top;
+        transform: rotateZ(5deg);
+    }
+    16.5%{
+        transform-origin: top;
+        transform: translate(0%,10%) rotateZ(-15deg);
+    }
+    27% {
+        transform-origin: top;
+        transform: translate(0%,6%) rotateZ(15deg);
+    }
+    38.5% {
+        transform-origin: top;
+        transform: translate(0%,4%) rotateZ(-15deg);
+    }
+    49%{
+        transform-origin: top;
+        transform: translate(0%,0%) rotateZ(15deg);
+    }
+    60.5%{
+        transform-origin: top;
+        transform: translate(0%,0%) rotateZ(-15deg);
+    }
+    71%{
+        transform-origin: top;
+        transform: translate(0%,12%) rotateZ(15deg);
+    }
+    82.5%{
+        transform-origin: top;
+        transform: translate(0%,10%) rotateZ(-15deg);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotateZ(15deg);
+    }
+}
+
+@keyframes dance-head-movement {
+    0%{
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(13deg);
+    }
+    16.5%{
+        transform-origin: center;
+        transform: translate(-50%, -35%) rotateZ(-13deg);
+    }
+    27% {
+        transform-origin: center;
+        transform: translate(-50%, -30%) rotateZ(0deg);
+    }
+    38.5% {
+        transform-origin: center;
+        transform: translate(-50%, -30%) rotateZ(-13deg);
+    }
+    49%{
+        transform-origin: center;
+        transform: translate(-50%, -25%) rotateZ(13deg);
+    }
+    60.5%{
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(-13deg);
+    }
+    71%{
+        transform-origin: center;
+        transform: translate(-50%, -30%) rotateZ(13deg);
+    }
+    82.5%{
+        transform-origin: center;
+        transform: translate(-50%, -25%) rotateZ(-13deg);
+    }
+    100%{
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(13deg);
+    }
+}
+
+/* @keyframes dance-lhand-movement {
+    0% {
+        transform-origin: center;
+    }
+    16.5% {
+        transform-origin: center;
+    }
+    0% {
+        transform-origin: center;
+    }
+    0% {
+        transform-origin: center;
+    }
+    0% {
+        transform-origin: center;
+    }
+    100% {
+        transform-origin: center;
+    }
+} */
+
+/* DANCE */
