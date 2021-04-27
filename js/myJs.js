@@ -2,7 +2,7 @@ var stateBulb=false;
 
 function turnOn() { 
     var bulbFilamentArray = document.getElementsByClassName("bulb_filament");
-    var btn=document.getElementsByClassName("button-txt-bulb")[0];
+    var btn=document.getElementsByClassName("buttons")[0];
     if(stateBulb){  
         for (var i = 0; i < bulbFilamentArray.length; i++) {
             bulbFilamentArray[i].style.backgroundColor = "rgb(53, 53, 53)";
@@ -16,7 +16,7 @@ function turnOn() {
         }
         document.getElementsByClassName("bulb_inner")[0].style.boxShadow= "0px -10px 10px 10px orange";
         stateBulb=true;
-        btn.innerHTML="Turn off";
+        btn.innerHTML="Turn off ";
     }
 }
 
