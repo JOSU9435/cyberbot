@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css">
   <title>test case</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Varela&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,12 +29,18 @@
 <div class="bulb_lower_2"></div> -->
   </div>
 
-  <div class="buttons">
-    <button onclick="turnOn()">Turn on the light
-    </button>
-    <button onclick="turnOff()">Turn off the light
-    </button>
+  <!-- BUTTONS -->
+  <div onclick="turnOn()" class="buttons button-bulb">
+    turn on
   </div>
+
+  <div onclick="hiAnimation()" class="buttons button-hi">
+    HI
+  </div>
+
+  <!-- BUTTONS -->
+
+  <!-- ANDROID -->
   <div class="and">
     <div class="and-head">
       <div class="l-ant"></div>
@@ -46,8 +53,9 @@
     <div class="r-hand"></div>
     <div class="l-leg"></div>
     <div class="r-leg"></div>
+  </div> 
+  <!-- ANDROID -->
 
-  </div>
 </body>
 <script src="Js/myJs.js"></script>
 
