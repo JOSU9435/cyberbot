@@ -100,8 +100,16 @@ body {
 {
     position:absolute;
     top:20vh;
-    left:50%;
+    left:52%;
     transform: translate(-50%,0);
+}
+button{
+    border-radius: 50vh;
+    margin-right: 10vh;
+    background-color: rgba(16, 201, 16, 0.849);
+    color: white;
+    height:7vh;
+    width: 15vh;
 }
 .and-head {
     position: absolute;
