@@ -11,7 +11,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30vh 30vh 15px 15px;
-    animation: 1s hi-head-movement -0.5s infinite alternate;
+    /* animation: 1s hi-head-movement -0.5s infinite alternate; */
+    animation: dance-head-movement 2s normal infinite ease-in;
     animation-timing-function: ease-in-out;
 }
 
@@ -68,7 +69,8 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -25%);
-    animation: 1s hi-body-movement -0.5s infinite alternate;
+    /* animation: 1s hi-body-movement -0.5s infinite alternate; */
+    animation: dance-body-movement 1.5s infinite alternate;
     animation-timing-function: ease-in-out;
 }
 .and {
@@ -92,12 +94,12 @@ body {
 }
 .and .l-hand {
     left: -6vh;
-    animation: 1s hi-lhand-movement -0.5s infinite alternate;
+    /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 .and .r-hand {
     right: -6vh;
-    animation: 1s hi-rhand-movement -0.5s infinite alternate;
+    /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 
@@ -116,7 +118,7 @@ body {
 
 .r-leg {
     right: 3vh;
-    animation: 1s hi-lleg-movement -0.5s infinite alternate;
+    /* animation: 1s hi-lleg-movement -0.5s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 
@@ -240,5 +242,83 @@ body {
     }
     100%{      
         transform: rotateX(180deg);
+    }
+}
+
+@keyframes dance-body-movement {
+    0%{
+        transform-origin: center;
+    }
+    20%{
+        transform-origin: center;
+       transform: translate(-50%,-20%) rotateZ(5deg); 
+    }
+    40%{
+        transform-origin: center;
+       transform: translate(-50%,-20%) rotateZ(-5deg); 
+    }
+    60%{
+        transform-origin: center;
+       transform: translate(-50%,-20%) rotateZ(5deg); 
+    }
+    100%{
+        transform-origin: center;
+       transform: translate(-50%,-25%) rotateZ(-5deg); 
+    }
+}
+
+@keyframes dance-head-movement {
+    0%{
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(7deg);
+    }
+    16.5%{
+        transform-origin: center;
+        transform: translate(-50%, -35%) rotateZ(-7deg);
+    }
+    24.75% {
+        transform-origin: center;
+        transform: translate(-50%, -40%) rotateZ(0deg);
+    }
+    33%{
+        transform-origin: center;
+        transform: translate(-50%, -45%) rotateZ(-7deg);
+    }
+    49.5%{
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(5deg);
+    }
+    66%{
+        transform-origin: center;
+        transform: translate(-50%, -30%) rotateZ(-5deg);
+    }
+    82.5%{
+        transform-origin: center;
+        transform: translate(-50%, -40%) rotateZ(5deg);
+    }
+    100%{
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(-5deg);
+    }
+}
+
+@keyframes dance-lhand-movement {
+    0% {
+        transform-origin: center;
+    }
+    16.5% {
+        transform-origin: center;
+    }
+    0% {
+        transform-origin: center;
+    }
+    0% {
+        transform-origin: center;
+    }
+    0% {
+        transform-origin: center;
+    }
+    100% {
+        transform-origin: center;
     }
 }
