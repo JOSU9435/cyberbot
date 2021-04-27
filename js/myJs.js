@@ -20,7 +20,6 @@ function turnOn() {
     }
 }
 
-var stateHi=false;
 
 function hiAnimation(){
 
@@ -31,29 +30,22 @@ function hiAnimation(){
     var lHand=document.getElementsByClassName("l-hand")[0];
     var rHand=document.getElementsByClassName("r-hand")[0];
     var rleg=document.getElementsByClassName("r-leg")[0];
+            
+    head.style.animation="1s hi-head-movement ease-in-out 0s 2 alternate";
+    lEye.style.animation="1s hi-eye-movement 0s 2 alternate";
+    rEye.style.animation="1s hi-eye-movement 0s 2 alternate";
+    body.style.animation="1s hi-body-movement ease-in-out 0s 2 alternate";
+    lHand.style.animation="1s hi-lhand-movement ease-in-out 0s 2 alternate";
+    rHand.style.animation="1s hi-rhand-movement ease-in-out 0s 2 alternate";
+    rleg.style.animation="1s hi-rleg-movement ease-in-out 0s 2 alternate";
 
-    var btn= document.getElementsByClassName("button-txt-hi")[0];
-    if(stateHi){
-        head.style.animation="none";
-        lEye.style.animation="none";
-        rEye.style.animation="none";
-        body.style.animation="none";
-        lHand.style.animation="none";
-        rHand.style.animation="none";
-        rleg.style.animation="none";
-
-        stateHi=false;
-        btn.innerHTML="Hi"
-    }else{
-        head.style.animation="1s hi-head-movement ease-in-out 0s infinite alternate";
-        lEye.style.animation="1s hi-eye-movement 0s infinite alternate";
-        rEye.style.animation="1s hi-eye-movement 0s infinite alternate";
-        body.style.animation="1s hi-body-movement ease-in-out 0s infinite alternate";
-        lHand.style.animation="1s hi-lhand-movement ease-in-out 0s infinite alternate";
-        rHand.style.animation="1s hi-rhand-movement ease-in-out 0s infinite alternate";
-        rleg.style.animation="1s hi-rleg-movement ease-in-out 0s infinite alternate";
-
-        stateHi=true;
-        btn.innerHTML="stop"
-    }
+    head.addEventListener("animationend",()=>{
+        head.style.animation="";            
+        lEye.style.animation="";
+        rEye.style.animation="";
+        body.style.animation="";
+        lHand.style.animation="";
+        rHand.style.animation="";
+        rleg.style.animation="";
+    });
 }

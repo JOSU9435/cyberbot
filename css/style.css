@@ -1,5 +1,6 @@
 body {
     background-color: rgb(53, 53, 53);
+    font-family: 'Poppins', sans-serif;
 }
 .bulb-container{
     position:absolute;
@@ -91,24 +92,48 @@ body {
     position:absolute;
     bottom: 15%;
     transform: translate(-50%,50%);
-    background-color: blue;
-    width: 8vh;
-    height: 4vh;    
-    border: 2px solid red;
+    background-color: rgb(53, 53, 53);
+    color: rgb(69, 235, 47);
+    width: 16vh;
+    height: 6vh;   
+    font-size: 3vh;
+    cursor: pointer; 
+    border: 2px solid black;
+    border-radius: 0.8vh 0.8vh 0.8vh 0.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-weight: 900;
+    transition: 0.4s;
+    user-select: none;
+}
+
+.buttons:hover{
+    color: rgb(53, 53, 53);
+    transition: 0.4s;
+    border: 0;
+}
+
+.buttons::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(69, 235, 47, 0.774);
+    width: 100%;
+    height: 0%;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+
+.buttons:hover::before{
+    height: 180%;
+    transition: 0.4s;
 }
 
 .button-bulb{
     left: 50%;
-}
-
-div.button-txt-bulb{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
 }
 
 .button-hi{
