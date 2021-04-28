@@ -6,89 +6,18 @@ body {
 
 .tubelight{
     position:absolute;
-    top:16vh;
-    width:50vh;
-    height:5vh;
-    left: 65vw;
-    border: 0.1vh solid white;
-    border-radius: 2vh;
+    top:8vh;
+    width:60%;
+    height:3.5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 0.2vh solid white;
+    border-radius: 1.4vh;
+    /* background-color: rgb(252, 255, 214); */
+    /* box-shadow: 0 1vh 5vh 0.7vh #ffffff; */
+    /* transition: 0.1s; */
+    /* animation: flicker 0.1s 0s alternate; */
 }
-/* img{
-    top:5vh;
-    left:50vh;
-    width:100px;
-    height:100px;
-    transform: translate(-50%,0);
-} */
-/* .bulb_outer
-{
-    border-radius: 50%;
-    border:0.2rem solid white ;
-    height:15vh;
-    width: 15vh;
-    position: absolute;
-}
-.bulb_inner
-{
-    border-radius:50% ;
-    border:0.1rem solid white;
-    height:10vh;
-    width:10vh;
-    left:50%;
-    bottom: 0.1vh;
-    background-color: rgba(255, 255, 0,0);
-    position:absolute;
-    transform: translate(-50%,0);
-}
-.bulb_inner_1
-{
-    border-radius:50% 50% 0  0;
-    border:0.05rem solid white;
-    height:3vh;
-    width: 3vh;
-    left:50%;
-    bottom:0.3vh;
-    background-color: rgba(255, 255, 0,0);
-    position: absolute;
-    transform: translate(-50%,0);
-}
-.bulb_inner_2
-{
-    border-radius:50% 50% 0  0;
-    border:0.05rem solid white;
-    height:3vh;
-    width: 1vh;
-    left:28%;
-    bottom:0.3vh;
-    background-color: rgba(255, 255, 0,0);
-    position: absolute;
-    transform: translate(-50%,0);
-}
-.bulb_inner_3
-{
-    border-radius:50% 50% 0  0;
-    border:0.05rem solid white;
-    height:3vh;
-    width: 1vh;
-    right:15%;
-    bottom:0.3vh;
-    background-color: rgba(255, 255, 0,0);
-    position: absolute;
-    transform: translate(-50%,0);
-}
-.bulb_lower
-{
-    border-radius:0 0 50% 50%;
-    border:0.05rem solid white;
-    height:6vh;
-    width: 5vh;
-    left:8vh;
-    top:16vh;
-    /* bottom:0.3vh; */
-    /* background-color: rgba(255, 255, 0,0); */
-    /* position: absolute; */
-    /* transform: translate(-50%,0); */
-/* } */
 
 /* BUTTONS */
 
@@ -103,7 +32,7 @@ body {
     height: 6vh;   
     font-size: 3vh;
     cursor: pointer; 
-    border: 2px solid black;
+    border: 0.3vh solid black;
     border-radius: 0.8vh 0.8vh 0.8vh 0.8vh;
     display: flex;
     justify-content: center;
@@ -138,16 +67,16 @@ body {
 }
 
 .button-bulb{
-    top:50%;
-    left: 77%;
+    top:85%;
+    left: 20%;
     transform: translate(-50%,-50%);
 }
 
 .button-hi{
-    left: 20%;
+    left: 50%;
 }
 .button-dance{
-    right: 20%;
+    left: 80%;
 }
 
 /* BUTTONS */
@@ -784,4 +713,22 @@ body {
     }
 }
 
+
 /* DANCE */
+
+/* FLICKER */
+@keyframes flicker {
+    0%{
+        background-color: none;
+    }
+    50% {
+        background-color: rgb(252, 255, 214);
+        box-shadow: 0 1vh 5vh 0.7vh #ffffff;
+    }
+    100% {
+        background-color: none;
+        /* background-color: rgb(252, 255, 214); */
+        /* box-shadow: 0 1vh 5vh 0.7vh #ffffff; */
+    }
+}
+/* /FLICKER */
