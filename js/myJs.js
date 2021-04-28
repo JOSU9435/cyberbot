@@ -60,10 +60,12 @@ function hiAnimation() {
 
 
 function danceAnimation() {
+    let music=document.getElementById("music");
     if(siezure==false){
         var disco = setInterval(discoMode, 140);
         document.getElementById("hint").style.display="none";
         alert("Photosensitive Epileptic warning. Flashing lights and patterns ahead.");
+        music.play();
     }
 
     var btn=document.getElementsByClassName("buttons")[2];
@@ -95,6 +97,8 @@ function danceAnimation() {
         rHand.style.animation = "";
         rleg.style.animation = "";
         lleg.style.animation = "";
+        music.pause();
+        music.currentTime=0;
         enableAllButtons();
         clearInterval(disco);
         document.getElementById("disco-bg").style.backgroundColor = "rgb(53, 53, 53)";
