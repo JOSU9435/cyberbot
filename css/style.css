@@ -1,7 +1,13 @@
+/* BODY */
+
 body {
     background-color: rgb(53, 53, 53);
     font-family: 'Poppins', sans-serif;
 }
+
+/* BODY */
+
+/* DISCO BACKGROUND TINT */
 
 #disco-bg {
     position: absolute;
@@ -9,10 +15,12 @@ body {
     left: 0;
     height: 100vh;
     width: 100%;
-    /* background-color:rgba(15, 193, 252, 0.6); */
 }
 
-/* Tubelight */
+/* DISCO BACKGROUND TINT */
+
+
+/* TUBELIGHT */
 
 .tubelight{
     position:absolute;
@@ -23,11 +31,8 @@ body {
     transform: translate(-50%, 0);
     border: 0.2vh solid white;
     border-radius: 1.4vh;
-    /* background-color: rgb(252, 255, 214); */
-    /* box-shadow: 0 1vh 5vh 0.7vh #ffffff; */
-    /* transition: 0.1s; */
-    /* animation: flicker 0.1s 0s alternate; */
 }
+
 
 .tubelight #tube-lens {
     position: absolute;
@@ -39,6 +44,7 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20%;
 }
+/* TUBELIGHT */
 
 /* BUTTONS */
 
@@ -102,6 +108,8 @@ body {
 
 /* BUTTONS */
 
+/* ANDROID */
+
 .and-head {
     position: absolute;
     height: 12vh;
@@ -110,10 +118,7 @@ body {
     top: -19%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 30vh 30vh 15px 15px;
-    /* animation: 1s hi-head-movement -0.5s infinite alternate; */
-    /* animation: 3s dance-head-movement 0s infinite ease-in-out alternate; */
-    /* animation-timing-function: ease-in-out; */
+    border-radius: 30vh 30vh 2vh 2vh;
 }
 
 .l-ant {
@@ -151,10 +156,7 @@ body {
     height: 4vh;
     width: 2vh;
     background-color: rgba(39, 38, 38, 0.5);
-    /* border: 0.5vh solid white; */
     border-radius: 3vh;
-    /* animation: 3s dance-eye-movement 0s infinite ease-in-out alternate; */
-    /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
     animation: 10s idle-leye-movement 0s infinite forwards;
 }
 .r-eye {
@@ -164,10 +166,7 @@ body {
     height: 4vh;
     width: 2vh;
     background-color: rgba(39, 38, 38, 0.5);
-    /* border: 0.5vh solid white; */
     border-radius: 3vh;    
-    /* animation: 3s dance-eye-movement 0s infinite ease-in-out alternate; */
-    /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
     animation: 10s idle-reye-movement 0s infinite forwards;
 }
 
@@ -180,8 +179,6 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -25%);
-    /* animation: 1s hi-body-movement -0.5s infinite alternate; */
-    /* animation: 3s dance-body-movement 0s infinite alternate; */
     animation-timing-function: ease-in-out;
 }
 .and {
@@ -204,16 +201,10 @@ body {
 } 
 .and .l-hand {
     left: -6vh;
-    /* animation: 3s dance-lhand-movement 0s infinite ease-in-out alternate; */
-    /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
-    /* animation-timing-function: ease-in-out; */
     animation: 10s idle-lhand-animation 0s infinite ease-in-out forwards;
 }
 .and .r-hand {
     right: -6vh;   
-    /* animation: 3s dance-rhand-movement 0s infinite ease-in-out alternate; */
-    /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
-    /* animation-timing-function: ease-in-out; */
     animation: 10s idle-rhand-animation 0s infinite ease-in-out forwards;
 }
 
@@ -228,14 +219,15 @@ body {
 
 .l-leg {
     left: 3vh;
-    /* animation: 1.5s dance-lleg-movement 0s infinite ease-in-out alternate; */
 }
 
 .r-leg {
     right: 3vh;  
-    /* animation: 1.5s dance-rleg-movement 0s infinite ease-in-out alternate; */
-    /* animation: 1s hi-lleg-movement -0.5s infinite alternate; */
 }
+
+/* ANDROID */
+
+/* HINT */
 
 #hint{
     position: absolute;
@@ -249,9 +241,9 @@ body {
     animation-name: hint;
 }
 
-/* HI ANIMATION */
+/* HINT */
 
-/* HI RIGHT HAND MOVEMENT */
+/* HI ANIMATION */
 
 @keyframes hi-rhand-movement {
     0%{
@@ -284,8 +276,6 @@ body {
     }
 }
 
-/* HI BODY MOVEMENT */
-
 @keyframes hi-body-movement {
     0%{
         transform-origin: center ;
@@ -300,8 +290,6 @@ body {
         transform: translate(-50%,-25%) rotate(-5deg);
     }
 }
-
-/* HI LEFT HAND MOVEMENT */
 
 @keyframes hi-lhand-movement {
     0%{
@@ -320,8 +308,6 @@ body {
     }
 }
 
-/* HI HEAD MOVEMENT */
-
 @keyframes hi-head-movement {
     0%{
         
@@ -338,8 +324,6 @@ body {
         top: -20%;
     }
 }
-
-/*HI RIGHT LEG MOVEMENT*/
 
 @keyframes hi-rleg-movement {
     0%{
@@ -358,8 +342,6 @@ body {
     }
 }
 
-/* HI EYE MOVEMENT */
-
 @keyframes hi-eye-movement {
     
     0%{
@@ -374,7 +356,7 @@ body {
     }
 }
 
-/* HIGH ANIMATION */
+/* HI ANIMATION */
 
 /* IDLE ANIMATION */
 @keyframes  idle-l-ant-movement{

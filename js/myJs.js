@@ -1,11 +1,17 @@
 var stateBulb = false;
+
 var colorList = ["rgba(252, 3, 190, 0.6)", "rgba(252, 3, 90, 0.6)", /*"rgba(52, 0, 224, 0.6)", "rgba(0, 255, 21, 0.6)", "rgba(251, 255, 0, 0.6)"*/,
  "rgba(255, 77, 0, 0.6)", "rgba(15, 193, 252, 0.6)" , "rgba(255, 0, 0,0.6)","rgba(124, 29, 175, 0.6)"];
+
 let siezure = true;
 let buttonArray = document.getElementsByClassName("buttons");
+
+//LIGHTS TOGGLE
+
 function turnOn() {
     var tubelight = document.getElementsByClassName("tubelight")[0];
     var btn = document.getElementsByClassName("buttons")[0];
+
     if (stateBulb) {
         tubelight.style.backgroundColor = "rgba(53, 53, 53, 0.25)";
         tubelight.style.boxShadow = "";
@@ -25,6 +31,9 @@ function turnOn() {
     }
 }
 
+//LIGHT TOGGLE
+
+//FUNCTION FOR HI ANIMATION
 
 function hiAnimation() {
     var btn=document.getElementsByClassName("buttons")[1];
@@ -58,6 +67,9 @@ function hiAnimation() {
     });
 }
 
+//FUNCTION FOR HI ANIMATION
+
+//FUNCTION FOR HI ANIMATION
 
 function danceAnimation() {
     let music=document.getElementById("music");
@@ -79,14 +91,14 @@ function danceAnimation() {
     var rleg = document.getElementsByClassName("r-leg")[0];
     var lleg = document.getElementsByClassName("l-leg")[0];
 
-    head.style.animation = "3s dance-head-movement ease-in-out 0s 4 alternate";
-    lEye.style.animation = "3s dance-eye-movement 0s 4 alternate";
-    rEye.style.animation = "3s dance-eye-movement 0s 4 alternate";
-    body.style.animation = "3s dance-body-movement ease-in-out 0s 4 alternate";
-    lHand.style.animation = "3s dance-lhand-movement ease-in-out 0s 4 alternate";
-    rHand.style.animation = "3s dance-rhand-movement ease-in-out 0s 4 alternate";
-    rleg.style.animation = "1.5s dance-rleg-movement ease-in-out 0s 8 alternate";
-    lleg.style.animation = "1.5s dance-lleg-movement ease-in-out 0s 8 alternate";
+    head.style.animation = "2.2s dance-head-movement ease-in-out 0s 5 alternate";
+    lEye.style.animation = "2.2s dance-eye-movement 0s 5 alternate";
+    rEye.style.animation = "2.2s dance-eye-movement 0s 5 alternate";
+    body.style.animation = "2.2s dance-body-movement ease-in-out 0s 5 alternate";
+    lHand.style.animation = "2.2s dance-lhand-movement ease-in-out 0s 5 alternate";
+    rHand.style.animation = "2.2s dance-rhand-movement ease-in-out 0s 5 alternate";
+    rleg.style.animation = "1.1s dance-rleg-movement ease-in-out 0s 10 alternate";
+    lleg.style.animation = "1.1s dance-lleg-movement ease-in-out 0s 10 alternate";
 
     head.addEventListener("animationend", () => {
         head.style.animation = "";
@@ -105,6 +117,10 @@ function danceAnimation() {
     });
 }
 
+//FUNCTION FOR HI ANIMATION
+
+//FUNCTION TO DISABLE BUTTONS 
+
 function disableAllOtherButton(button) {
     for (var i = 0; i < buttonArray.length; i++) {
 
@@ -113,12 +129,24 @@ function disableAllOtherButton(button) {
         }
     }
 }
+
+//FUNCTION TO DISABLE BUTTONS 
+
+//FUNCTION TO ENABLE BUTTONS 
+
 function enableAllButtons() {
     for (var i = 0; i < buttonArray.length; i++) {
         buttonArray[i].style.display = "flex";
     }
 }
+
+//FUNCTION TO ENABLE BUTTONS
+
+//FUNCTION TO ENABLE DISCO MODE
+
 function discoMode(){
     document.getElementById("disco-bg").style.backgroundColor = colorList[(Math.trunc(Math.random()*10))%colorList.length];
 }
+
+//FUNCTION TO ENABLE DISCO MODE
 
