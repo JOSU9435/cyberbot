@@ -1,18 +1,26 @@
 var stateBulb = false;
+var colorList = ["rgba(252, 3, 190, 0.8)", "rgba(252, 3, 90, 0.8)", "rgba(52, 0, 224, 0.8)", "rgba(0, 255, 21, 0.8)", "rgba(251, 255, 0, 0.8)", "rgba(255, 77, 0, 0.8)"];
+let siezure = true;
 let buttonArray = document.getElementsByClassName("buttons");
 function turnOn() {
     var tubelight = document.getElementsByClassName("tubelight")[0];
     var btn = document.getElementsByClassName("buttons")[0];
     if (stateBulb) {
-        tubelight.style.backgroundColor = "rgb(53, 53, 53)";
+        tubelight.style.backgroundColor = "rgba(53, 53, 53, 0.25)";
+        tubelight.style.boxShadow = "";
         stateBulb = false;
+        siezure = true;
         btn.innerHTML = "Turn on";
-        enableAllButtons();
     } else {
-        tubelight.style.backgroundColor = "#FAE844";
+        tubelight.style.animation = "flicker 0.1s 0s 2 alternate";
+        tubelight.addEventListener("animationend", () => {
+            tubelight.style.animation = "";
+            tubelight.style.backgroundColor = "rgb(252, 255, 214)";
+            tubelight.style.boxShadow = "0 1vh 5vh 0.7vh #fff";
+        });
         stateBulb = true;
+        siezure = false;
         btn.innerHTML = "Turn off ";
-        disableAllOtherButton(btn);
     }
 }
 
@@ -49,7 +57,11 @@ function hiAnimation() {
     });
 }
 
+
 function danceAnimation() {
+    if(siezure==false){
+        var disco = setInterval(discoMode, 150);
+    }
     var btn=document.getElementsByClassName("buttons")[2];
     disableAllOtherButton(btn);
 
@@ -81,6 +93,8 @@ function danceAnimation() {
         rleg.style.animation = "";
         lleg.style.animation = "";
         enableAllButtons();
+        clearInterval(disco);
+        document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(53, 53, 53)";
     });
 }
 
@@ -128,4 +142,6 @@ function enableAllButtons() {
         buttonArray[i].style.display = "flex";
     }
 }
-
+function discoMode(){
+    document.getElementsByTagName("body")[0].style.backgroundColor = colorList[(Math.trunc(Math.random()*10))%colorList.length];
+}
