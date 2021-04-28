@@ -1,5 +1,6 @@
 var stateBulb = false;
-var colorList = ["rgba(252, 3, 190, 0.8)", "rgba(252, 3, 90, 0.8)", "rgba(52, 0, 224, 0.8)", /*"rgba(0, 255, 21, 0.8)", "rgba(251, 255, 0, 0.8)",*/ "rgba(255, 77, 0, 0.8)"];
+var colorList = ["rgba(252, 3, 190, 0.6)", "rgba(252, 3, 90, 0.6)", /*"rgba(52, 0, 224, 0.6)", "rgba(0, 255, 21, 0.6)", "rgba(251, 255, 0, 0.6)"*/,
+ "rgba(255, 77, 0, 0.6)", "rgba(15, 193, 252, 0.6)" , "rgba(255, 0, 0,0.6)","rgba(124, 29, 175, 0.6)"];
 let siezure = true;
 let buttonArray = document.getElementsByClassName("buttons");
 function turnOn() {
@@ -61,7 +62,9 @@ function hiAnimation() {
 function danceAnimation() {
     if(siezure==false){
         var disco = setInterval(discoMode, 140);
+        alert("Photosensitive Epileptic warning. Flashing lights and patterns ahead.");
     }
+
     var btn=document.getElementsByClassName("buttons")[2];
     disableAllOtherButton(btn);
     var head = document.getElementsByClassName("and-head")[0];
@@ -93,7 +96,7 @@ function danceAnimation() {
         lleg.style.animation = "";
         enableAllButtons();
         clearInterval(disco);
-        document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(53, 53, 53)";
+        document.getElementById("disco-bg").style.backgroundColor = "rgb(53, 53, 53)";
     });
 }
 
@@ -111,5 +114,6 @@ function enableAllButtons() {
     }
 }
 function discoMode(){
-    document.getElementsByTagName("body")[0].style.backgroundColor = colorList[(Math.trunc(Math.random()*10))%colorList.length];
+    document.getElementById("disco-bg").style.backgroundColor = colorList[(Math.trunc(Math.random()*10))%colorList.length];
 }
+
