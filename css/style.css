@@ -230,6 +230,18 @@ body {
     /* animation: 1s hi-lleg-movement -0.5s infinite alternate; */
 }
 
+#hint{
+    position: absolute;
+    width:100%;
+    height:4vh;
+    top:93%;
+    left:0;
+    color: rgb(69, 235, 47);
+    text-align: center;
+    font-size: 2vh;
+    animation-name: hint;
+}
+
 /* HI ANIMATION */
 
 /* HI RIGHT HAND MOVEMENT */

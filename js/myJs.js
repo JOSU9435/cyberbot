@@ -62,6 +62,7 @@ function hiAnimation() {
 function danceAnimation() {
     if(siezure==false){
         var disco = setInterval(discoMode, 140);
+        document.getElementById("hint").style.display="none";
         alert("Photosensitive Epileptic warning. Flashing lights and patterns ahead.");
     }
 
