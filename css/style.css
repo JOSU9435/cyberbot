@@ -148,7 +148,7 @@ body {
     border-radius: 3vh;
     /* animation: 3s dance-eye-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
-    /* animation: 10s idle-leye-movement 0s infinite forwards; */
+    animation: 10s idle-leye-movement 0s infinite forwards;
 }
 .r-eye {
     position: absolute;
@@ -161,7 +161,7 @@ body {
     border-radius: 3vh;    
     /* animation: 3s dance-eye-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
-    /* animation: 10s idle-reye-movement 0s infinite forwards; */
+    animation: 10s idle-reye-movement 0s infinite forwards;
 }
 
 .and-body {
@@ -200,14 +200,14 @@ body {
     /* animation: 3s dance-lhand-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
-    /* animation: 10s idle-lhand-animation 0s infinite ease-in-out forwards; */
+    animation: 10s idle-lhand-animation 0s infinite ease-in-out forwards;
 }
 .and .r-hand {
     right: -6vh;   
     /* animation: 3s dance-rhand-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
-    /* animation: 10s idle-rhand-animation 0s infinite ease-in-out forwards; */
+    animation: 10s idle-rhand-animation 0s infinite ease-in-out forwards;
 }
 
 .and .l-leg, .r-leg {
