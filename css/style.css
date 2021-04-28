@@ -28,7 +28,7 @@ body {
     transform: translate(-50%,50%);
     background-color: rgb(53, 53, 53);
     color: rgb(69, 235, 47);
-    width: 16vh;
+    width: 30vh;
     height: 6vh;   
     font-size: 3vh;
     cursor: pointer; 
@@ -127,7 +127,7 @@ body {
     border-radius: 3vh;
     /* animation: 3s dance-eye-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
-    animation: 10s idle-leye-movement 0s infinite forwards;
+    /* animation: 10s idle-leye-movement 0s infinite forwards; */
 }
 .r-eye {
     position: absolute;
@@ -140,7 +140,7 @@ body {
     border-radius: 3vh;    
     /* animation: 3s dance-eye-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-eye-movement -0.5s infinite alternate; */
-    animation: 10s idle-reye-movement 0s infinite forwards;
+    /* animation: 10s idle-reye-movement 0s infinite forwards; */
 }
 
 .and-body {
@@ -179,16 +179,14 @@ body {
     /* animation: 3s dance-lhand-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-lhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
-    animation: 10s idle-lhand-animation 0s infinite forwards;
-    animation-timing-function: ease-in-out;
+    /* animation: 10s idle-lhand-animation 0s infinite ease-in-out forwards; */
 }
 .and .r-hand {
     right: -6vh;   
     /* animation: 3s dance-rhand-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-rhand-movement -0.5s infinite alternate; */
     /* animation-timing-function: ease-in-out; */
-    animation: 10s idle-rhand-animation 0s infinite forwards;
-    animation-timing-function: ease-in-out;
+    /* animation: 10s idle-rhand-animation 0s infinite ease-in-out forwards; */
 }
 
 .and .l-leg, .r-leg {
@@ -209,7 +207,6 @@ body {
     right: 3vh;  
     /* animation: 1.5s dance-rleg-movement 0s infinite ease-in-out alternate; */
     /* animation: 1s hi-lleg-movement -0.5s infinite alternate; */
-    animation-timing-function: ease-in-out;
 }
 
 /* HI ANIMATION */
@@ -727,8 +724,6 @@ body {
     }
     100% {
         background-color: none;
-        /* background-color: rgb(252, 255, 214); */
-        /* box-shadow: 0 1vh 5vh 0.7vh #ffffff; */
     }
 }
 /* /FLICKER */

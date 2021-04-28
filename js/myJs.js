@@ -1,5 +1,5 @@
 var stateBulb = false;
-var colorList = ["rgba(252, 3, 190, 0.8)", "rgba(252, 3, 90, 0.8)", "rgba(52, 0, 224, 0.8)", "rgba(0, 255, 21, 0.8)", "rgba(251, 255, 0, 0.8)", "rgba(255, 77, 0, 0.8)"];
+var colorList = ["rgba(252, 3, 190, 0.8)", "rgba(252, 3, 90, 0.8)", "rgba(52, 0, 224, 0.8)", /*"rgba(0, 255, 21, 0.8)", "rgba(251, 255, 0, 0.8)",*/ "rgba(255, 77, 0, 0.8)"];
 let siezure = true;
 let buttonArray = document.getElementsByClassName("buttons");
 function turnOn() {
@@ -10,7 +10,7 @@ function turnOn() {
         tubelight.style.boxShadow = "";
         stateBulb = false;
         siezure = true;
-        btn.innerHTML = "Turn on";
+        btn.innerHTML = "Turn On Lights";
     } else {
         tubelight.style.animation = "flicker 0.1s 0s 2 alternate";
         tubelight.addEventListener("animationend", () => {
@@ -20,7 +20,7 @@ function turnOn() {
         });
         stateBulb = true;
         siezure = false;
-        btn.innerHTML = "Turn off ";
+        btn.innerHTML = "Turn Off Lights";
     }
 }
 
@@ -60,11 +60,10 @@ function hiAnimation() {
 
 function danceAnimation() {
     if(siezure==false){
-        var disco = setInterval(discoMode, 150);
+        var disco = setInterval(discoMode, 140);
     }
     var btn=document.getElementsByClassName("buttons")[2];
     disableAllOtherButton(btn);
-
     var head = document.getElementsByClassName("and-head")[0];
     var lEye = document.getElementsByClassName("l-eye")[0];
     var rEye = document.getElementsByClassName("r-eye")[0];
@@ -96,37 +95,6 @@ function danceAnimation() {
         clearInterval(disco);
         document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(53, 53, 53)";
     });
-}
-
-function turnOffHandRotate() {
-    var rHand = document.getElementsByClassName("r-hand")[0];
-    rHand.animate(
-        [
-            {
-                transformOrigin: "top"
-            }
-            , {
-                transform: "rotate(0deg)"
-
-            }
-        ], {
-        duration: 900, iterations: 1, fill: 'forwards'
-    }
-    );
-    setTimeout(() => {
-        rHand.style.animation=null;
-    },900);
-}
-
-function turnOnTubelight() {
-    document.getElementsByClassName('tubelight-container')[0].animate([
-        {
-            backgroundColor: "yellow"
-        }
-    ], {
-        duration: 1000
-    }
-    );
 }
 
 function disableAllOtherButton(button) {
