@@ -2,6 +2,13 @@ body {
     background-color: rgb(53, 53, 53);
     font-family: 'Poppins', sans-serif;
 }
+
+#disco-bg {
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(207, 49, 49); */
+}
+
 /* Tubelight */
 
 .tubelight{
@@ -17,6 +24,17 @@ body {
     /* box-shadow: 0 1vh 5vh 0.7vh #ffffff; */
     /* transition: 0.1s; */
     /* animation: flicker 0.1s 0s alternate; */
+}
+
+.tubelight #tube-lens {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 98%;
+    height: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20%;
 }
 
 /* BUTTONS */
