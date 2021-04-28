@@ -117,24 +117,31 @@ body {
 }
 
 .l-ant {
+    top:-20%;
     position: absolute;
     width: 1vh;
     height: 7vh;
     background-color: rgb(69, 235, 47);
     border-radius: 6vh;
-    transform: rotateZ(-45deg);
+    transform: rotateZ(-35deg);
+    transform-origin:bottom center;
     z-index: -1;
+    left:3vh;
+    animation: 10s -2s ease-in-out  infinite idle-l-ant-movement;
 }
 
 .r-ant {
+    top:-20%;
+    right: 3vh;
     position: absolute;
     width: 1vh;
     height: 7vh;
-    right: 0;
     background-color: rgb(69, 235, 47);
     border-radius: 6vh;
-    transform: rotateZ(45deg);
+    transform: rotateZ(35deg);
+    transform-origin:bottom center;
     z-index: -1;
+    animation: 10s -2s ease-in-out  infinite idle-r-ant-movement;
 }
 
 .l-eye {
@@ -370,8 +377,50 @@ body {
 /* HIGH ANIMATION */
 
 /* IDLE ANIMATION */
-
-
+@keyframes  idle-l-ant-movement{
+    0%{
+        transform-origin:bottom center;
+        transform: rotate(-40deg);
+    }
+    93%{
+        transform-origin:bottom center;
+        transform: rotate(-30deg);
+    }
+    95%{
+        transform-origin:bottom center;
+        transform: rotate(-40deg);
+    }
+    97%{
+        transform-origin:bottom center;
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform-origin:bottom center;
+        transform: rotate(-40deg);  
+    }
+}
+@keyframes idle-r-ant-movement{
+    0%{
+        transform-origin:bottom center;
+        transform: rotate(40deg);
+    }
+    93%{
+        transform-origin:bottom center;
+        transform: rotate(30deg);
+    }
+    95%{
+        transform-origin:bottom center;
+        transform: rotate(40deg);
+    }
+    97%{
+        transform-origin:bottom center;
+        transform: rotate(30deg);
+    }
+    100%{
+        transform-origin:bottom center;
+        transform: rotate(40deg);  
+    }
+}
 @keyframes idle-leye-movement {
     0%{
         transform: rotateX(0deg);
