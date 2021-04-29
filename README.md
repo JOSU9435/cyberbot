@@ -14,3 +14,9 @@ our project for cyberbot
 ## **dance-animation**
 > Also the _Make me Dance_ button is present which makes the android mascot dance to a predetermined song.
 Also if the user turns on the lights and then clicks the dance button the mascot dances to the song while the background colour changes it's property to show different colours.
+
+***
+## Made by:
+  > NetraKamal Barua
+  > Vikas
+  > Sangeet Sarkar
