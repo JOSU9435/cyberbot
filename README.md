@@ -18,5 +18,5 @@ Also if the user turns on the lights and then clicks the dance button the mascot
 ***
 ## Made by:
   > NetraKamal Barua <br>
-  > Vikas
-  > Sangeet Sarkar
+  > Vikas <br>
+  > Sangeet Sarkar <br>
