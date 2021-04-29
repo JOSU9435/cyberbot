@@ -16,7 +16,7 @@ our project for cyberbot
 Also if the user turns on the lights and then clicks the dance button the mascot dances to the song while the background colour changes it's property to show different colours.
 
 ***
-## Made by:
+## Contributors:
   > &nbsp; Netrakamal Barua <br>
   > &nbsp; Vikas <br>
   > &nbsp; Sangeet Sarkar <br>
