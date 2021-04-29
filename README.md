@@ -3,7 +3,7 @@ Our project for cyberbot
 [click here to access our website](https://seekers-cyberbot4.netlify.app)
 <br>
 <br>
-> Dancing Android is a project which aims to provide a fun and inteactive game where the user can interect with a android mascot and make it perform different actions.
+Dancing Android is a project which aims to provide a fun and inteactive game where the user can interect with a android mascot and make it perform different actions.
 <br>
 ## **idle-animation**
 > When left idle the mascot moves its arms and eyes and it's antennas move to show a dynamic effect.
