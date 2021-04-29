@@ -1,7 +1,7 @@
 var stateBulb = false;
 var dance = false;
-var colorList = ["rgba(252, 3, 190, 0.6)", "rgba(252, 3, 90, 0.6)", /*"rgba(52, 0, 224, 0.6)", "rgba(0, 255, 21, 0.6)", "rgba(251, 255, 0, 0.6)"*/,
- "rgba(255, 77, 0, 0.6)", "rgba(15, 193, 252, 0.6)" , "rgba(255, 0, 0,0.6)","rgba(124, 29, 175, 0.6)"];
+var colorList = ["rgba(252, 3, 190, 0.6)", "rgba(252, 3, 90, 0.6)","rgba(255, 77, 0, 0.6)", 
+"rgba(15, 193, 252, 0.6)" , "rgba(255, 0, 0,0.6)","rgba(124, 29, 175, 0.6)"];
 
 let siezure = true;
 let buttonArray = document.getElementsByClassName("buttons");
