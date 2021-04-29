@@ -12,7 +12,7 @@ our project for cyberbot
 > The `Turn On Lights` button iluuminates a tubelight present in the website. A small animation effect has been put in to show a flickering effect while turnng on the tubelight.
 
 ## **dance-animation**
-> Also the `Make me Dance` button is present which makes the android mascot dance to a predetermined song. <br>
+> Also the `Make me Dance` button is present which makes the android mascot dance to a predetermined song. <br> <br?
 Also if the user turns on the lights and then clicks the dance button the mascot dances to the song while the background colour changes it's property to show different colours.
 
 ***
