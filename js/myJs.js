@@ -1,5 +1,5 @@
 var stateBulb = false;
-
+var dance = false;
 var colorList = ["rgba(252, 3, 190, 0.6)", "rgba(252, 3, 90, 0.6)", /*"rgba(52, 0, 224, 0.6)", "rgba(0, 255, 21, 0.6)", "rgba(251, 255, 0, 0.6)"*/,
  "rgba(255, 77, 0, 0.6)", "rgba(15, 193, 252, 0.6)" , "rgba(255, 0, 0,0.6)","rgba(124, 29, 175, 0.6)"];
 
@@ -69,36 +69,42 @@ function hiAnimation() {
 
 //FUNCTION FOR HI ANIMATION
 
-//FUNCTION FOR HI ANIMATION
+//FUNCTION FOR DANCE ANIMATION
 
 function danceAnimation() {
     let music=document.getElementById("music");
-    if(siezure==false){
-        var disco = setInterval(discoMode, 140);
-        document.getElementById("hint").style.display="none";
-        alert("Photosensitive Epileptic warning. Flashing lights and patterns ahead.");
-        music.play();
-    }
-
     var btn=document.getElementsByClassName("buttons")[2];
-    disableAllOtherButton(btn);
-    var head = document.getElementsByClassName("and-head")[0];
-    var lEye = document.getElementsByClassName("l-eye")[0];
-    var rEye = document.getElementsByClassName("r-eye")[0];
-    var body = document.getElementsByClassName("and-body")[0];
-    var lHand = document.getElementsByClassName("l-hand")[0];
-    var rHand = document.getElementsByClassName("r-hand")[0];
-    var rleg = document.getElementsByClassName("r-leg")[0];
-    var lleg = document.getElementsByClassName("l-leg")[0];
 
-    head.style.animation = "2.2s dance-head-movement ease-in-out 0s 5 alternate";
-    lEye.style.animation = "2.2s dance-eye-movement 0s 5 alternate";
-    rEye.style.animation = "2.2s dance-eye-movement 0s 5 alternate";
-    body.style.animation = "2.2s dance-body-movement ease-in-out 0s 5 alternate";
-    lHand.style.animation = "2.2s dance-lhand-movement ease-in-out 0s 5 alternate";
-    rHand.style.animation = "2.2s dance-rhand-movement ease-in-out 0s 5 alternate";
-    rleg.style.animation = "1.1s dance-rleg-movement ease-in-out 0s 10 alternate";
-    lleg.style.animation = "1.1s dance-lleg-movement ease-in-out 0s 10 alternate";
+    if(dance==false){
+
+        if(siezure==false){
+            var disco = setInterval(discoMode, 50);
+            document.getElementById("hint").style.display="none";
+            alert("Photosensitive Epileptic warning. Flashing lights and patterns ahead.");
+        
+        }    
+        music.currentTime=2;
+        music.play();
+        disableAllOtherButton(btn);
+        var head = document.getElementsByClassName("and-head")[0];
+        var lEye = document.getElementsByClassName("l-eye")[0];
+        var rEye = document.getElementsByClassName("r-eye")[0];
+        var body = document.getElementsByClassName("and-body")[0];
+        var lHand = document.getElementsByClassName("l-hand")[0];
+        var rHand = document.getElementsByClassName("r-hand")[0];
+        var rleg = document.getElementsByClassName("r-leg")[0];
+        var lleg = document.getElementsByClassName("l-leg")[0];
+
+        head.style.animation = "2.6s dance-head-movement ease-in-out 0s 4 alternate";
+        lEye.style.animation = "2.6s dance-eye-movement 0s 4 alternate";
+        rEye.style.animation = "2.6s dance-eye-movement 0s 4 alternate";
+        body.style.animation = "2.6s dance-body-movement ease-in-out 0s 4 alternate";
+        lHand.style.animation = "2.6s dance-lhand-movement ease-in-out 0s 4 alternate";
+        rHand.style.animation = "2.6s dance-rhand-movement ease-in-out 0s 4 alternate";
+        rleg.style.animation = "1.3s dance-rleg-movement ease-in-out 0s 8 alternate";
+        lleg.style.animation = "1.3s dance-lleg-movement ease-in-out 0s 8 alternate";
+        dance=true;
+    }
 
     head.addEventListener("animationend", () => {
         head.style.animation = "";
@@ -114,10 +120,11 @@ function danceAnimation() {
         enableAllButtons();
         clearInterval(disco);
         document.getElementById("disco-bg").style.backgroundColor = "rgb(53, 53, 53)";
+        dance=false;
     });
 }
 
-//FUNCTION FOR HI ANIMATION
+//FUNCTION FOR DANCE ANIMATION
 
 //FUNCTION TO DISABLE BUTTONS 
 
